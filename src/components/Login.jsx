@@ -1,10 +1,39 @@
-import React from "react";
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import group from "../assets/Group 1.png";
 import google from "../assets/Google.svg";
 import facebook from "../assets/Facebook.svg";
 
 const Login = () => {
+  const [credentials, setCredentials] = useState({email: "", password: ""}) 
+  let  navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      const response = await fetch("http://localhost:3000/api/user/login", {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({email: credentials.email, password: credentials.password})
+      });
+      const json = await response.json()
+      console.log(json);
+      if (json.success){
+          // Save the auth token and redirect
+          localStorage.setItem('token', json.authtoken); 
+          navigate('/');
+
+      }
+      else{
+          alert("Invalid credentials");
+      }
+  }
+
+  const onChange = (e)=>{
+      setCredentials({...credentials, [e.target.name]: e.target.value})
+  }
   return (
     <div className="w-full sm:w-auto h-screen md:h-screen flex items-center bg-[#60A547]">
       <div className="static w-1/3 h-full flex flex-col">
@@ -124,24 +153,31 @@ h-[52.229px] text-[#060606] my-2 font-semibold bg-white p-4 text-center flex ite
         <div className="w-full flex items-center justify-center relative py-2">
           <p className="text-lg abosulte text-black/80 bg-[#f5f5f5]">- OR -</p>
         </div>
-
+        <div>
+            <form  onSubmit={handleSubmit}>
         <div className="w-full items-center justify-center flex flex-col">
           <input
             type="email"
+            id="email" name="email"
+            value={credentials.email}
+            onChange={onChange}
             placeholder="Email"
             className="w-[605px] py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none"
           />
           <input
-            type="Password"
+            type="password"
+            value={credentials.password} onChange={onChange} name="password" id="password" minLength={5}
             placeholder="Password"
             className="w-[605px] py-4 my-2 bg-transparent border-b border-black outline-none focus:outline-none"
           />
         </div>
 
-        <div className="  justify-center items-center flex flex-col h-[52.229px]">
-          <button className="w-[605.851px] bg-[#60A547] my-2 rounded-md p-4 text-center flex items-center justify-center">
+        <div className=" my-2 justify-center items-center flex flex-col h-[52.229px]">
+          <button type="submit" className="w-[605.851px] bg-[#60A547] my-2 rounded-md p-4 text-center flex items-center justify-center">
             <p className="text-center">Log In</p>
           </button>
+        </div>
+        </form>
         </div>
         <div className="pl-[180px] pt-[32px]">
           <p className="pt-[32px] pb-[117px] pr-[391px] items-center">
