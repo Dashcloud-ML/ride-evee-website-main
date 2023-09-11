@@ -1,0 +1,59 @@
+.aboutpage-sec1 {
+  background-image: url("../../assets/Rectangle\ 28.png");
+  background-size: cover;
+  padding: 70px 166px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+
+.sec1-inner {
+  flex-flow: column;
+  background: #fcfdf2;
+}
+
+.sec1-inner > h1 {
+  padding: 69px 286px 50px 286px;
+}
+
+.sec1-inner > h6 {
+  padding-bottom: 151px;
+  margin-top: 50px;
+}
+
+.aboutpage-sec2 {
+  background: #fcfdf2;
+}
+
+.para1 {
+  padding-bottom: 190px;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-top: 50px;
+}
+.para2 {
+  padding-bottom: 190px;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+.para3 {
+  padding-bottom: 190px;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+.para4 {
+  padding-bottom: 190px;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+.para5 {
+  padding-bottom: 190px;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+
+.aboutpage-logo {
+  display: flex;
+  flex-direction: row;
+}

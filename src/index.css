@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=M+PLUS+Rounded+1c&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-tab {
+  background-color: #60a547 !important;
+  color: white !important;
+  border-radius: 12px;
+  border: 1px solid #60a547;
+  background: #fff;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.1);
+}
+.unactive-tab {
+  border-radius: 12px;
+  border: 1px solid #60a547;
+  background: #fff;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.1);
+  color: "#60A547";
+}

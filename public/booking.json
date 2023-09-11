@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "4",
+    "day": "22",
+    "month": "july",
+    "location": "Lucknow, Uttar pradesh - Outstation",
+    "distance": "(539 Km)",
+    "area": "Lucknow -> Gorakhpur -> Lucknow",
+    "paid": 0,
+    "tripid": "S0723 - 5840415",
+    "from": "From: 1090 Lucknow, 1090 Chauraha, Butler Colony, Lucknow, 226001",
+    "status": "Completed"
+  },
+  {
+    "_id": "5",
+    "day": "24",
+    "month": "july",
+    "location": "Lucknow, Uttar pradesh - Outstation",
+    "distance": "(539 Km)",
+    "area": "Lucknow -> Gorakhpur -> Lucknow",
+    "paid": 0,
+    "tripid": "S0723 - 5840415",
+    "from": "From: 1090 Lucknow, 1090 Chauraha, Butler Colony, Lucknow, 226001",
+    "status": "Completed"
+  },
+  {
+    "_id": "6",
+    "day": "26",
+    "month": "july",
+    "location": "Lucknow, Uttar pradesh - Outstation",
+    "distance": "(539 Km)",
+    "area": "Lucknow -> Gorakhpur -> Lucknow",
+    "paid": 0,
+    "tripid": "S0723 - 5840415",
+    "from": "From: 1090 Lucknow, 1090 Chauraha, Butler Colony, Lucknow, 226001",
+    "status": "Cancelled"
+  },
+  {
+    "_id": "7",
+    "day": "28",
+    "month": "july",
+    "location": "Lucknow, Uttar pradesh - Outstation",
+    "distance": "(539 Km)",
+    "area": "Lucknow -> Gorakhpur -> Lucknow",
+    "paid": 0,
+    "tripid": "S0723 - 5840415",
+    "from": "From: 1090 Lucknow, 1090 Chauraha, Butler Colony, Lucknow, 226001",
+    "status": "Cancelled"
+  }
+]
