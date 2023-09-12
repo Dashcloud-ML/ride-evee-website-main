@@ -17,7 +17,8 @@ const SignUp = () => {
     e.preventDefault();
     const { name, email, password } = credentials;
 
-    const response = await fetch("http://localhost:3000/api/user/register", {
+    const response = await fetch("https://ride-evee-backend.onrender.com/api/user/register", {
+      
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +108,7 @@ const SignUp = () => {
           <img
             src={group}
             alt=""
-            className="absolute bottom-0 left-0 w-[700px] "
+            className="absolute bottom-0 left-0 w-[1/3] md:w-[2/3]ss "
             style={{
               background: `linear-gradient(199deg, #60A547 49.27%, #D5F5C9 100%)`,
             }}
